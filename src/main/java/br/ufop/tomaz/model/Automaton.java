@@ -1,3 +1,5 @@
+package br.ufop.tomaz.model;
+
 import java.util.HashMap;
 import java.util.Map;
 

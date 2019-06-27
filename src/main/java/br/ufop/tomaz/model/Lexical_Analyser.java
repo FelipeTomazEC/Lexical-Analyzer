@@ -1,3 +1,5 @@
+package br.ufop.tomaz.model;
+
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -11,9 +13,9 @@ public class Lexical_Analyser {
 
     private Map<String, Token> keywordsAndOperatorsMap;
 
-    public Lexical_Analyser(){
+    public Lexical_Analyser() {
         this.keywordsAndOperatorsMap = new HashMap<>();
-        keywordsAndOperatorsMap.put("for",Token.KEYWORD);
+        keywordsAndOperatorsMap.put("for", Token.KEYWORD);
         keywordsAndOperatorsMap.put("while", Token.KEYWORD);
         keywordsAndOperatorsMap.put("do", Token.KEYWORD);
         keywordsAndOperatorsMap.put("if", Token.KEYWORD);
@@ -48,9 +50,9 @@ public class Lexical_Analyser {
         Map<Integer, Map<String, Token>> mapTokensLine = new LinkedHashMap<>();
         try {
             List<String> lines = Files.readAllLines(filePath, Charset.forName("UTF-8"));
-            for(int i = 0; i < lines.size(); i++){
+            for (int i = 0; i < lines.size(); i++) {
                 Map<String, Token> lineTokens = analyseLine(lines.get(i).strip());
-                mapTokensLine.put(i+1, lineTokens);
+                mapTokensLine.put(i + 1, lineTokens);
             }
         } catch (IOException e) {
             e.printStackTrace();

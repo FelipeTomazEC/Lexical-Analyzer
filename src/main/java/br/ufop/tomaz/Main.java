@@ -1,6 +1,10 @@
+package br.ufop.tomaz;
+
+import br.ufop.tomaz.model.Lexical_Analyser;
+import br.ufop.tomaz.model.Token;
+
 import java.io.File;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Main {
 
@@ -8,7 +12,7 @@ public class Main {
         //Scanner scanner = new Scanner(System.in);
         //System.out.println("Digite o caminho do arquivo:");
         //String path = scanner.next();
-        String path = Main.class.getResource("/TestFile.txt").getFile();
+        String path = Main.class.getResource("/br/ufop/tomaz/testfiles/TestFile.txt").getFile();
         File file = new File(path);
         evaluate(file);
     }
