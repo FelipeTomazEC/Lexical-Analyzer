@@ -1,0 +1,5 @@
+for ( it := 0 ; it < 3 ; it := it + 1)
+    if ( a <= b )
+        b = 12.71 + 4
+    else
+        print ( "funciona" ) .
