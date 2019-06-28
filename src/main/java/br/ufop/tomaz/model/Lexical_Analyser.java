@@ -43,15 +43,13 @@ public class Lexical_Analyser {
         keywordsAndOperatorsMap.put("@", Token.ENDER);
     }
 
-    public List<Lexeme> analyseCode(List<String> lines) {
+    public List<Lexeme> analyseCode(Map<Integer,String> lines) {
 
         List<Lexeme> lexemes = new ArrayList<>();
-
-        for (int i = 0; i < lines.size(); i++) {
-            Map<String, Token> lineTokens = analyseLine(lines.get(i).strip());
-            int finalI = i;
-            lineTokens.forEach((k, v) -> lexemes.add(new Lexeme(v, k, finalI)));
-        }
+        lines.forEach((nLine, line ) ->{
+            Map<String, Token> lexLine = analyseLine(line.strip());
+            lexLine.forEach((value, token) -> lexemes.add(new Lexeme(token, value, nLine)));
+        });
 
         return lexemes;
     }

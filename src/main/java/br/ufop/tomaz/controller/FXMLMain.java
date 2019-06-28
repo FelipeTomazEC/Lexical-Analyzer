@@ -20,10 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class FXMLMain implements Initializable {
 
@@ -68,8 +65,21 @@ public class FXMLMain implements Initializable {
 
     @FXML
     private void analyse(){
-        String code = codeTextArea.getText();
-        List<Lexeme> lexemes = new Lexical_Analyser().analyseCode(Arrays.asList(code.split("\n")));
+        String [] lines = codeTextArea.getText().split("\n");
+        Map<Integer, String> code = new HashMap<>();
+        boolean lock = true; // To ignore multiple lines comments
+
+        for(int i = 0; i < lines.length; i++){
+            String line = lines[i];
+            if(!line.strip().startsWith("//") && lock && !line.strip().startsWith("/*"))
+                code.put(i+1, line);
+            if(line.strip().startsWith("/*"))
+                lock = false;
+            if(line.strip().endsWith("*/"))
+                lock = true;
+        }
+
+        List<Lexeme> lexemes = new Lexical_Analyser().analyseCode(code);
         tokensTable.setItems(FXCollections.observableList(lexemes));
     }
 }
