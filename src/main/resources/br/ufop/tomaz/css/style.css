@@ -1,0 +1,27 @@
+.root{
+    -fx-background-color: rgba(0, 0, 0, 0.79);
+}
+.jfx-button{
+    -fx-pref-width: 100px;
+    -fx-pref-height: 20px;
+    -fx-text-fill: WHITE;
+    -fx-background-color: #11801a;
+}
+
+.jfx-text-area{
+    -fx-background-color: #696969;
+    -fx-text-fill: WHITE;
+}
+
+.ikonli-font-icon{
+    -fx-icon-color: WHITE;
+    -fx-icon-size: 20;
+}
+.code-label{
+    -fx-text-fill: WHITE;
+    -fx-font-size: 15;
+}
+
+.table-view{
+    -fx-background-color: #696969;
+}

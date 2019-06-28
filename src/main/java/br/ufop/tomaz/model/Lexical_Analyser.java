@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Lexical_Analyser {
 
@@ -46,19 +43,17 @@ public class Lexical_Analyser {
         keywordsAndOperatorsMap.put("@", Token.ENDER);
     }
 
-    public Map<Integer, Map<String, Token>> analyseCode(Path filePath) {
-        Map<Integer, Map<String, Token>> mapTokensLine = new LinkedHashMap<>();
-        try {
-            List<String> lines = Files.readAllLines(filePath, Charset.forName("UTF-8"));
-            for (int i = 0; i < lines.size(); i++) {
-                Map<String, Token> lineTokens = analyseLine(lines.get(i).strip());
-                mapTokensLine.put(i + 1, lineTokens);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    public List<Lexeme> analyseCode(List<String> lines) {
+
+        List<Lexeme> lexemes = new ArrayList<>();
+
+        for (int i = 0; i < lines.size(); i++) {
+            Map<String, Token> lineTokens = analyseLine(lines.get(i).strip());
+            int finalI = i;
+            lineTokens.forEach((k, v) -> lexemes.add(new Lexeme(v, k, finalI)));
         }
 
-        return mapTokensLine;
+        return lexemes;
     }
 
     private Map<String, Token> analyseLine(String line) {
@@ -75,5 +70,4 @@ public class Lexical_Analyser {
 
         return lineTokens;
     }
-
 }

@@ -1,9 +1,15 @@
 plugins {
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
 group 'br.ufop.tomaz'
 version '1.0-SNAPSHOT'
+
+javafx {
+    version = "12"
+    modules = [ 'javafx.controls', 'javafx.fxml']
+}
 
 sourceCompatibility = 11
 targetCompatibility = 11
@@ -16,5 +22,11 @@ mainClassName = "br.ufop.tomaz.Main"
 
 
 dependencies {
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '9.0.8'
+    // https://mvnrepository.com/artifact/org.kordamp.ikonli/ikonli-javafx
+    compile group: 'org.kordamp.ikonli', name: 'ikonli-javafx', version: '11.3.3'
+    // https://mvnrepository.com/artifact/org.kordamp.ikonli/ikonli-fontawesome-pack
+    compile group: 'org.kordamp.ikonli', name: 'ikonli-fontawesome-pack', version: '11.3.3'
+    
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
