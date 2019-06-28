@@ -71,7 +71,7 @@ public class FXMLMain implements Initializable {
 
         for(int i = 0; i < lines.length; i++){
             String line = lines[i];
-            if(!line.strip().startsWith("//") && lock && !line.strip().startsWith("/*"))
+            if(!line.strip().startsWith("//") && lock && !line.strip().startsWith("/*") && !line.isBlank())
                 code.put(i+1, line);
             if(line.strip().startsWith("/*"))
                 lock = false;

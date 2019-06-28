@@ -31,9 +31,9 @@
    <center>
       <TableView fx:id="tokensTable" prefHeight="451.0" prefWidth="261.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="lineCol" prefWidth="75.0" text="Line" />
+          <TableColumn fx:id="lineCol" prefWidth="75.0" sortable="false" text="Line" />
           <TableColumn fx:id="tokenCol" prefWidth="75.0" sortable="false" text="Token" />
-            <TableColumn fx:id="attributeCol" prefWidth="75.0" text="Attribute" />
+            <TableColumn fx:id="attributeCol" prefWidth="75.0" sortable="false" text="Attribute" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

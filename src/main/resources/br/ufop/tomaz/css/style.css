@@ -1,6 +1,7 @@
 .root{
     -fx-background-color: rgba(0, 0, 0, 0.79);
 }
+
 .jfx-button{
     -fx-pref-width: 100px;
     -fx-pref-height: 20px;
@@ -8,20 +9,40 @@
     -fx-background-color: #11801a;
 }
 
-.jfx-text-area{
+.jfx-button:hover{
+    -fx-background-color: #16b217;
+    -fx-font-weight: 600;
+}
+
+.jfx-text-area, .table-view {
     -fx-background-color: #696969;
     -fx-text-fill: WHITE;
 }
 
 .ikonli-font-icon{
     -fx-icon-color: WHITE;
-    -fx-icon-size: 20;
+    -fx-icon-size: 25px;
 }
 .code-label{
     -fx-text-fill: WHITE;
     -fx-font-size: 15;
 }
 
-.table-view{
-    -fx-background-color: #696969;
+.table-row-cell, .table-cell{
+    -fx-text-fill: WHITE;
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell:even{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+.table-row-cell:odd{
+    -fx-background-color: rgba(0, 0, 0, 0.79);
+}
+
+.table-view .column-header, .column-header .label
+{
+    -fx-background-color: #11801a;
+    -fx-text-fill: WHITE;
+    -fx-font-size: 15;
 }
