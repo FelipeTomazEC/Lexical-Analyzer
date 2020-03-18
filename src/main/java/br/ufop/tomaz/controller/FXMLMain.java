@@ -2,7 +2,7 @@ package br.ufop.tomaz.controller;
 
 import br.ufop.tomaz.Main;
 import br.ufop.tomaz.model.Lexeme;
-import br.ufop.tomaz.model.Lexical_Analyser;
+import br.ufop.tomaz.model.Lexical_Analyzer;
 import br.ufop.tomaz.model.Token;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
@@ -79,7 +79,7 @@ public class FXMLMain implements Initializable {
                 lock = true;
         }
 
-        List<Lexeme> lexemes = new Lexical_Analyser().analyseCode(code);
+        List<Lexeme> lexemes = new Lexical_Analyzer().analyzeCode(code);
         tokensTable.setItems(FXCollections.observableList(lexemes));
     }
 }
