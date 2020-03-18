@@ -21,7 +21,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(Main.class.getResource("/br/ufop/tomaz/fxml/FXMLMain.fxml"));
         Scene scene = new Scene(root, 800,500);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Lexical Analyser");
+        primaryStage.setTitle("Lexical Analyzer");
         primaryStage.show();
     }
 }
