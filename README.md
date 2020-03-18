@@ -38,19 +38,22 @@ of tokens:
 - **INVALID**;
 - **ASSIGN_OP** - Assignment operator (=);
 - **SEMICOLON** - (;)
-- **LP** - Left parenthesis '(';
-- **RP** - Right parenthesis ')';
+- **LEFT_PARENTHESIS** - '(';
+- **RIGHT_PARENTHESIS** - ')';
+- **LEFT_BRACE** - ({);
+- **RIGHT_BRACE** - (});
 - **COMMA** - (,);
 - **DOT** - (.);
 - **DOTDOT** - (..);
 - **COLON** - (:);
 - **EQUAL** - (==);
-- **LE** - Lower or equal operator (<=);
-- **GE** - Greater or equal operator (>=);
-- **NE** - Not equal operator (<>);
-- **GT** - Greater than (>);
-- **LT** - Lower than (<);
-- **ENDER** - (@).
+- **LOWER_OR_EQUALS** - (<=);
+- **GREATER_OR_EQUALS** - (>=);
+- **NOT_EQUALS** - (<>);
+- **GREATER_THAN** - (>);
+- **LOWER_THAN** - (<);
+- **AT_SIGN** - (@).
+
 
 ***P.S. 1**: Sentences initiated by // or chunks of sentences between /* */
 are considered comments and are not mentioned in the output.*

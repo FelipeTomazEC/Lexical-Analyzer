@@ -36,7 +36,7 @@ public class Lexical_Analyzer {
         keywordsAndOperatorsMap.put("<", Token.LOWER_THAN);
         keywordsAndOperatorsMap.put("<>", Token.NOT_EQUALS);
         keywordsAndOperatorsMap.put(":=", Token.ASSIGNMENT_OPERATOR);
-        keywordsAndOperatorsMap.put("@", Token.ENDER);
+        keywordsAndOperatorsMap.put("@", Token.AT_SIGN);
         keywordsAndOperatorsMap.put("{", Token.LEFT_BRACE);
         keywordsAndOperatorsMap.put("}", Token.RIGHT_BRACE);
     }
