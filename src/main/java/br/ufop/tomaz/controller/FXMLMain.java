@@ -26,7 +26,7 @@ public class FXMLMain implements Initializable {
 
     @FXML private MenuBar menubar;
     @FXML private JFXTextArea codeTextArea;
-    @FXML private JFXButton btnAnalyse;
+    @FXML private JFXButton btnAnalyze;
     @FXML private JFXButton btnClear;
     @FXML private TableView<Lexeme> tokensTable;
     @FXML private TableColumn<Lexeme, Integer> lineCol;
@@ -40,7 +40,7 @@ public class FXMLMain implements Initializable {
         tokenCol.setCellValueFactory(new PropertyValueFactory<>("token"));
         attributeCol.setCellValueFactory(new PropertyValueFactory<>("value"));
 
-        btnAnalyse.disableProperty().bind(codeTextArea.textProperty().isEmpty());
+        btnAnalyze.disableProperty().bind(codeTextArea.textProperty().isEmpty());
         btnClear.disableProperty().bind(codeTextArea.textProperty().isEmpty());
     }
 
@@ -64,7 +64,7 @@ public class FXMLMain implements Initializable {
     }
 
     @FXML
-    private void analyse(){
+    private void analyze(){
         String [] lines = codeTextArea.getText().split("\n");
         Map<Integer, String> code = new HashMap<>();
         boolean lock = true; // To ignore multiple lines comments

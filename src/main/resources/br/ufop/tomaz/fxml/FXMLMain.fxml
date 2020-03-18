@@ -58,7 +58,7 @@
             </JFXTextArea>
             <HBox alignment="CENTER" prefHeight="38.0" prefWidth="248.0" spacing="15.0">
                <children>
-                  <JFXButton fx:id="btnAnalyse" graphicTextGap="10.0" onAction="#analyse" prefHeight="30.0" prefWidth="90.0" text="Analyse">
+                  <JFXButton fx:id="btnAnalyze" graphicTextGap="10.0" onAction="#analyze" prefHeight="30.0" prefWidth="90.0" text="Analyze">
                      <graphic>
                         <FontIcon iconLiteral="fa-play-circle-o" />
                      </graphic>
