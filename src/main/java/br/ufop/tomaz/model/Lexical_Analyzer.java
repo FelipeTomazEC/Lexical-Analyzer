@@ -1,16 +1,12 @@
 package br.ufop.tomaz.model;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 
-public class Lexical_Analyser {
+public class Lexical_Analyzer {
 
     private Map<String, Token> keywordsAndOperatorsMap;
 
-    public Lexical_Analyser() {
+    public Lexical_Analyzer() {
         this.keywordsAndOperatorsMap = new HashMap<>();
         keywordsAndOperatorsMap.put("for", Token.KEYWORD);
         keywordsAndOperatorsMap.put("while", Token.KEYWORD);
@@ -32,18 +28,20 @@ public class Lexical_Analyser {
         keywordsAndOperatorsMap.put("=", Token.EQUAL);
         keywordsAndOperatorsMap.put(":", Token.COLON);
         keywordsAndOperatorsMap.put(";", Token.SEMICOLON);
-        keywordsAndOperatorsMap.put("(", Token.LP);
-        keywordsAndOperatorsMap.put(")", Token.RP);
-        keywordsAndOperatorsMap.put(">=", Token.GE);
-        keywordsAndOperatorsMap.put("<=", Token.LE);
-        keywordsAndOperatorsMap.put(">", Token.GT);
-        keywordsAndOperatorsMap.put("<", Token.LT);
-        keywordsAndOperatorsMap.put("<>", Token.NE);
-        keywordsAndOperatorsMap.put(":=", Token.ASSIGN_OP);
+        keywordsAndOperatorsMap.put("(", Token.LEFT_PARENTHESIS);
+        keywordsAndOperatorsMap.put(")", Token.RIGHT_PARENTHESIS);
+        keywordsAndOperatorsMap.put(">=", Token.GREATER_OR_EQUALS);
+        keywordsAndOperatorsMap.put("<=", Token.LOWER_OR_EQUALS);
+        keywordsAndOperatorsMap.put(">", Token.GREATER_THAN);
+        keywordsAndOperatorsMap.put("<", Token.LOWER_THAN);
+        keywordsAndOperatorsMap.put("<>", Token.NOT_EQUALS);
+        keywordsAndOperatorsMap.put(":=", Token.ASSIGNMENT_OPERATOR);
         keywordsAndOperatorsMap.put("@", Token.ENDER);
+        keywordsAndOperatorsMap.put("{", Token.LEFT_BRACE);
+        keywordsAndOperatorsMap.put("}", Token.RIGHT_BRACE);
     }
 
-    public List<Lexeme> analyseCode(Map<Integer,String> lines) {
+    public List<Lexeme> analyzeCode(Map<Integer,String> lines) {
 
         List<Lexeme> lexemes = new ArrayList<>();
         lines.forEach((nLine, line ) ->{
