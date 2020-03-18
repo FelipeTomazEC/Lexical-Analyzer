@@ -27,32 +27,32 @@ The Lexical Analyzer of this project recognizes the following classes
 of tokens:
 - **IDENTIFIER** - Variable names;
 - **STRING** - Words between double quotes "";
-- **INTEGER** - Number with no dot (.);
+- **INTEGER** - Number with no dot ( . );
 - **FLOAT** - Float point numbers;
-- **PLUS** - (+);
-- **MINUS** - (-);
-- **TIMES** - (*),
-- **DIVIDE** - (/);
+- **PLUS** - ( + );
+- **MINUS** - ( - );
+- **TIMES** - ( * ),
+- **DIVIDE** - ( / );
 - **KEYWORD** - for, while, do, if, else, print, switch, case, default and
   null;
 - **INVALID**;
-- **ASSIGN_OP** - Assignment operator (=);
-- **SEMICOLON** - (;)
+- **ASSIGN_OP** - Assignment operator ( = );
+- **SEMICOLON** - ( ; )
 - **LEFT_PARENTHESIS** - '(';
 - **RIGHT_PARENTHESIS** - ')';
-- **LEFT_BRACE** - ({);
-- **RIGHT_BRACE** - (});
-- **COMMA** - (,);
-- **DOT** - (.);
-- **DOTDOT** - (..);
-- **COLON** - (:);
-- **EQUAL** - (==);
-- **LOWER_OR_EQUALS** - (<=);
-- **GREATER_OR_EQUALS** - (>=);
-- **NOT_EQUALS** - (<>);
-- **GREATER_THAN** - (>);
-- **LOWER_THAN** - (<);
-- **AT_SIGN** - (@).
+- **LEFT_BRACE** - ( { );
+- **RIGHT_BRACE** - ( } );
+- **COMMA** - ( , );
+- **DOT** - ( . );
+- **DOTDOT** - ( .. );
+- **COLON** - ( : );
+- **EQUAL** - ( == );
+- **LOWER_OR_EQUALS** - ( <= );
+- **GREATER_OR_EQUALS** - ( >= );
+- **NOT_EQUALS** - ( <> );
+- **GREATER_THAN** - ( > );
+- **LOWER_THAN** - ( < );
+- **AT_SIGN** - ( @ ).
 
 
 ***P.S. 1**: Sentences initiated by // or chunks of sentences between /* */
