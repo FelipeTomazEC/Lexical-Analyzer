@@ -12,7 +12,7 @@ The Lexical Analyzer is responsible to separate the source code into
 lexemes, which are the words that compose the code. After separate all
 lexemes, the LA classify them using Token classification. **Keywords**,
 **Special Symbols**, **Identifiers** and **Operators**, are examples of
-tokens. Remove white spaces and comments of the compiled code is also a
+tokens. Removing white spaces and comments of the compiled code is also a
 role played by the Lexical Analyzer. The output of this process is a
 table containing the lexemes and their token classification. Lexical
 errors as invalid constructions of lexemes, *e.g. '12variableName'*,
@@ -20,7 +20,7 @@ errors as invalid constructions of lexemes, *e.g. '12variableName'*,
 
 This project is an implementation of a **simple** Lexical Analyzer made in Java.
 It provides a GUI where the user can type the code and get the tokens of it.
-It is also possible load the code from a file and make the analysis.
+It is also possible to load the code from a file and make the analysis.
 
 ### Recognized Tokens
 The Lexical Analyzer of this project recognizes the following classes
