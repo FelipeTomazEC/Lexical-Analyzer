@@ -1,6 +1,6 @@
 # Lexical Analyzer
 
-The task of translates high level code, i.e., programming languages, into
+The task of translating high level code, i.e., programming languages, into
 a format that can be understand by a computer - binary code - is the
 main job of a compiler. Speaking in a simple way, the compiler can be
 split in 3 parts:
