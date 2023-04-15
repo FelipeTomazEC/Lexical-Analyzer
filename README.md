@@ -1,18 +1,18 @@
 # Lexical Analyzer
 
 The task of translating high level code, i.e., programming languages, into
-a format that can be understand by a computer - binary code - is the
+a format that can be understood by a computer - binary code - is the
 main job of a compiler. Speaking in a simple way, the compiler can be
-split in 3 parts:
+splited in 3 parts:
 - Lexical Analyzer (LA)
 - Syntax Analyzer (SA)
 - Semantic Analyzer (SMA)
 
-The Lexical Analyzer is responsible to separate the source code into
-lexemes, which are the words that compose the code. After separate all
-lexemes, the LA classify them using Token classification. **Keywords**,
+The Lexical Analyzer is responsible for separating the source code into
+lexemes, which are the words that compose the code. After separating all
+lexemes, the LA classifies them using Token classification. **Keywords**,
 **Special Symbols**, **Identifiers** and **Operators**, are examples of
-tokens. Removing white spaces and comments of the compiled code is also a
+tokens. Removing white spaces and comments from the compiled code is also a
 role played by the Lexical Analyzer. The output of this process is a
 table containing the lexemes and their token classification. Lexical
 errors as invalid constructions of lexemes, *e.g. '12variableName'*,
@@ -66,5 +66,5 @@ to be recognized as separated things.*
 
 ### Conclusion
 This is a very simple example that demonstrates how a Lexical Analyzer
-can be implemented. This project is also an usage example of
+can be implemented. This project is also a usage example of
 Finite-State Automata, a very powerful and useful tool.
